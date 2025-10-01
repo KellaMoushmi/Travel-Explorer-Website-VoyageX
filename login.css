@@ -1,0 +1,82 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    font-family: 'Courier New', Courier, monospace ;
+}
+/* Logo top-right corner */
+.top-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.top-logo h1 {
+    color: #4CAF50;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* If using image logo */
+.top-logo img {
+    width: 100px;
+}
+
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('log.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #557dec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-form button:hover {
+    background-color: #794fdb;
+}
+.login-form p {
+    margin-top: 20px;
+    color: #333;
+}
+.login-form p a {
+    color: #524fe6;
+    text-decoration: none;
+}
+.login-form p a:hover {
+    text-decoration: underline;
+}

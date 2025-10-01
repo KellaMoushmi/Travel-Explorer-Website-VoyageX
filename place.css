@@ -1,0 +1,181 @@
+/* tirupati.css - neon gallery, rainbow-hover description, photographer cards */
+
+/* reset & base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root{
+  --bg: #000;
+  --cyan: #00e5ff;
+  --muted: #cfd8dc;
+  --card-bg: rgba(0,0,0,0.55);
+}
+body {
+  background: var(--bg);
+  color: #fff;
+  font-family: 'Poppins', system-ui, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  line-height: 1.5;
+}
+
+/* container */
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px 60px;
+}
+
+/* header */
+.hero { text-align: center; margin-bottom: 24px; }
+.hero h1 { font-size: 2.6rem; color: rgba(212, 240, 52, 0.55);
+  text-shadow: 0 0 10px rgba(228, 231, 48, 0.6), 0 0 30px rgba(206, 230, 70, 0.15);
+  margin-bottom: 6px;
+}
+.hero .sub { color: #dfeff3; opacity: .9; }
+
+/* --- Gallery --- */
+.gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+/* image box */
+.image-box {
+  flex: 1 1 0;
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.15));
+  position: relative;
+  cursor: pointer;
+  transition: transform .28s ease, box-shadow .28s ease;
+  box-shadow:
+    0 0 18px rgba(0,229,255,0.12),
+    inset 0 0 6px rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* neon ring around images using :before */
+.image-box::before{
+  content:"";
+  position:absolute; inset: -2px;
+  border-radius: 18px;
+  padding:2px;
+  background: linear-gradient(90deg, rgba(0,229,255,0.85), rgba(172,43,139,0.7));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events:none;
+  filter: blur(6px);
+  opacity:0.9;
+}
+
+/* image */
+.image-box img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+  transition: transform .4s ease;
+}
+
+/* hover */
+.image-box:hover { transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0,229,255,0.14), 0 0 50px rgba(172,43,139,0.06);
+}
+.image-box:hover img { transform: scale(1.05); }
+
+/* --- Description + Weather Row --- */
+.info-row {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+/* description card with rainbow border on hover */
+.description-card{
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(0,0,0,0.6);
+  transition: transform .25s ease;
+}
+
+/* inner content */
+.description-card h2{ color: var(--cyan); margin-bottom: 10px; text-shadow: 0 0 6px rgba(0,229,255,0.25); }
+.description-card p { color: #e6f6fb; margin-bottom: 12px; }
+
+/* specialty badge */
+.description-card .spec { display:inline-block; padding:8px 12px; background: rgba(255,255,255,0.02);
+  border-radius: 8px; color:#dff9ff; font-weight:600; }
+
+/* rainbow animated border (hidden by default, appears on :hover) */
+.description-card::after {
+  content:"";
+  position:absolute; inset:-3px;
+  border-radius:14px;
+ 
+  z-index:0;
+  opacity:0;
+  transform: scale(0.98);
+  transition: opacity .28s ease, transform .28s ease;
+  filter: blur(8px);
+  pointer-events:none;
+}
+
+/* bring content above pseudo element */
+.description-card * { position: relative; z-index: 2; }
+
+/* hover to reveal rainbow glow */
+.description-card:hover::after { opacity:1; transform: scale(1); }
+
+/* weather card */
+.weather-card{
+  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.55));
+  border-radius: 12px;
+  padding: 16px;
+  color: #fff;
+  box-shadow: 0 0 18px rgba(0,229,255,0.1);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:10px;
+  min-height:150px;
+}
+
+/* weather small styles inside */
+.weather-card img { width:64px; height:64px; }
+.w-temp{ font-size:1.6rem; color:var(--cyan); text-shadow:0 0 10px rgba(0,229,255,0.4); }
+
+/* --- Photography guide area --- */
+.photography-section { margin-top:10px; padding-top:10px; border-top: 1px dashed rgba(255,255,255,0.05); text-align:center; }
+.booking-line { margin:18px 0; color:#fff; font-weight:600; }
+
+/* photographer cards lined horizontally, with photo left and info right */
+.photographers {
+  display:flex; gap:18px; justify-content:center; flex-wrap:wrap;
+}
+.guide-card{
+  display:flex; gap:12px; align-items:center;
+  background: rgba(0,0,0,0.45);
+  padding:10px 12px; border-radius:10px;
+  box-shadow: 0 0 12px rgba(0,229,255,0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.guide-card:hover { transform: translateY(-6px); box-shadow: 0 0 22px rgba(0,229,255,0.25); }
+
+.guide-card img{ width:68px; height:68px; border-radius:50%; object-fit:cover; box-shadow: 0 0 8px rgba(0,229,255,0.15); }
+.guide-info h4{ color:var(--cyan); margin-bottom:4px; font-size:1rem; text-shadow:0 0 6px rgba(0,229,255,0.2);}
+.guide-info p{ color:#dfeff3; font-size:0.92rem; margin:0; }
+
+/* responsive */
+@media (max-width:900px){
+  .gallery{ flex-direction:column; }
+  .info-row{ grid-template-columns: 1fr; }
+  .photographers{ flex-direction:column; align-items:center; }
+}

@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: cyan;
+  text-shadow: 0 0 15px cyan;
+}
+
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.place-card {
+  text-align: center;
+}
+
+.place-box {
+  display: block;
+  height: 250px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px cyan;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.place-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgb(230, 44, 189), 0 0 50px rgb(211, 37, 153);
+}
+
+.place-card h2 {
+  margin-bottom: 15px;       /* ensures text is below the box */
+  font-size: 1.5rem;
+  color: rgb(252, 250, 250);
+  text-shadow: 0 0 12px rgb(223, 219, 219), 0 0 24px rgb(221, 24, 24); /* neon glow */
+}
+
+

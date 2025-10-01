@@ -1,0 +1,353 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace ;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;   
+  height: auto;
+  filter: drop-shadow(0 0 10px rgb(87, 16, 180)); 
+}
+
+.logo span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(44, 119, 204);
+  text-shadow: 0 0 10px rgb(50, 184, 224), 0 0 20px rgb(172, 43, 139);
+}
+
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  text-shadow: 0 0 5px rgb(58, 20, 192);
+}
+
+nav ul li a:hover {
+  color: rgb(87, 172, 211);
+  text-shadow: 0 0 10px rgb(74, 134, 202), 0 0 20px rgb(61, 143, 168);
+}
+
+#home {
+  height: 100vh;
+  background: url('home.webp') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 20px rgb(12, 30, 185);
+  margin-bottom: 20px;
+}
+
+.home-content span {
+  color: rgb(12, 11, 6);
+  text-shadow: 0 0 15px rgb(84, 194, 209);
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.search-box input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  width: 300px;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 25px 25px 0;
+  background: rgb(6, 14, 14);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #0a0a0a;
+}
+
+
+.mood-suggestions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mood-suggestions span {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  font-size: 1.6rem;
+  color: #fff;
+  background: rgba(0, 229, 255, 0.2); 
+  border: 2px solid #0a0a0a;
+  border-radius: 5rem;
+  margin-top: 2rem;
+  transition: 0.3s ease;
+  cursor: pointer;
+  text-shadow: 0 0 5px #0b0c0c;
+  box-shadow: 0 0 8px #0a0a0a;
+}
+
+.mood-suggestions span:hover {
+  background: transparent;
+  color: #fff;
+  box-shadow: 0 0 15px #00e5ff, 0 0 30px #00e5ff;
+}
+
+#about {
+  padding: 80px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #fff;
+}
+#about {
+  height: 100vh;
+  background: url('neon.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 70px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+}
+
+.about-image img {
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #0ff;
+  
+}
+
+.about-text  {
+  background: rgba(0, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgb(28, 60, 165);
+  text-align: justify;   
+  line-height: 1.1;      
+  font-size: 1.1rem;     
+  color: #ddd;          
+}
+
+
+
+.about-text h2 {
+  color: rgb(62, 146, 214);
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgb(39, 116, 146);
+  text-align: center;
+}
+
+.social-media  a {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 4rem;
+    height: 4rem;
+    background: rgba(68, 233, 142, 0.1);
+    border: .2rem solid rgba(91, 216, 75, 0.2);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: rgba(36, 231, 94, 0.2);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.social-media a:hover {
+    color: rgb(212, 95, 173);
+    background: rgba(221, 240, 51, 0.1);
+    box-shadow: 0 0 1rem rgba(28, 216, 175, 0.2);
+   
+}
+
+
+
+#contact {
+  background: #000;
+  padding: 90px 50px;
+  text-align: center;
+  color: #fff;
+}
+
+#contact h2 {
+  font-size: 2.8rem;  
+  margin-bottom: 30px;
+  color: #0ff;
+  text-shadow: 0 0 15px #0ff;
+}
+
+.contact-form {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(0, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 250px;
+  width: 100%;
+}
+
+.contact-form button {
+  align-self: center;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 10px;
+  background: #0ff;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #fff;
+  color: #000;
+}
+#contact {
+  background: url('neon.jpg') no-repeat center center/cover; 
+  padding: 80px 50px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+} 
+
+/* Explore Section */
+#explore {
+  padding: 80px 50px;
+  background: #000; /* fallback background */
+  text-align: center;
+  color: #fff;
+}
+
+#explore h2 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px #0ff;
+}
+
+.explore-intro {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  color: #aaa;
+}
+
+.explore-options {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.explore-box {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 20px rgba(47, 18, 177, 0.5);
+}
+
+.explore-box:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px rgb(67, 201, 211);
+}
+
+.explore-box.india {
+  background-image: url("india.png"); 
+}
+
+.explore-box.abroad {
+  background-image: url("abroad.jpg"); 
+}
+

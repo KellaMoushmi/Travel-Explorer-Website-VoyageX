@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Travel Explorer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    
+    <div class="top-logo">
+        <img src="logo.png" alt="VoyageX Logo">
+    </div>
+
+    <div class="register-container">
+        <div class="register-form">
+            <h2>Create An Account</h2>
+            <!-- ✅ Added id="registerForm" -->
+            <form id="registerForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+            
+            <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+
+    <!-- ✅ keep script AFTER form -->
+    <script src="register.js"></script>
+</body>
+</html>
+

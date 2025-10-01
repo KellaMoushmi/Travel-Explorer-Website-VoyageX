@@ -1,0 +1,77 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: rgb(75, 221, 95);
+  text-shadow: 0 0 15px rgb(71, 219, 41), 0 0 25px cyan;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-top: 10px;
+}
+
+/* States Grid */
+.states-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Each State Card */
+.state-card {
+  position: relative;
+  height: 250px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 15px rgb(82, 30, 204);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.state-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgb(193, 196, 49), 0 0 50px rgb(210, 219, 86);
+}
+
+
+.state-card span {
+  position: absolute;
+  bottom: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  color: rgb(60, 210, 221);
+  font-weight: bold;
+  text-shadow: 0 0 10px rgb(67, 185, 206), 0 0 20px rgb(101, 233, 222);
+}
+
+
+
